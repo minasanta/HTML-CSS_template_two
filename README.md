@@ -13,3 +13,6 @@ A second resbonsive web template page using HTML & CSS only
 ## What I learned new
 
 - how to make bars icon that shows the links when you click on it using CSS-media on phones
+- how to add an overlay with many ways
+- make the content responsive in advanced way
+- good using of [transform and transition]CSS

@@ -2,6 +2,7 @@
 :root {
     --main-color: #19c8fa;
     --transparent-color: rgb(15 116 143 / 70%);
+    --padding-section: 100px;
 }
 /* End vars */
 /* Start global rules */
@@ -71,7 +72,7 @@ ul {
     position: relative;
     margin-bottom: 70px;
     text-transform: uppercase;
-    margin-top: 100px;
+    /* margin-top: 100px; */
 }
 
 .main-heading h2::before {
@@ -203,7 +204,6 @@ header nav .form i {
     color: white;
     position: absolute;
     top: 50%;
-    left: 50%;
     transform: translateY(-50%);
     right: 0;
 }
@@ -307,3 +307,208 @@ header nav .form i {
     background-color: var(--main-color);
 }
 /* End Landing */
+
+/* Start Services section */
+#services {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+
+@media (min-width: 768px) {
+    #services .services-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(450px,1fr));
+        row-gap: 60px;
+        column-gap: 40px;
+    }
+}
+
+#services .services-container .srv-box {
+    display: flex;
+}
+
+#services .services-container .srv-box i {
+    margin-right: 50px;
+}
+
+@media (max-width: 768px) {
+    #services .services-container .srv-box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #services .services-container .srv-box i {
+        margin: 0 0 30px;
+    }
+}
+
+#services .services-container .srv-box .text h3 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+
+#services .services-container .srv-box .text p {
+    line-height: 2;
+    color: #777;
+}
+/* End Services section */
+
+/* Start Design */
+#design {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+    height: 600px;
+    position: relative;
+    background-image: url(../images/design-features.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+#design::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 60%);
+}
+
+#design .image,
+#design .text {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+#design .image {
+    text-align: center;
+}
+
+@media (max-width: 900px) {
+    #design .image {
+        display: none;
+    }
+}
+
+#design .image img {
+    position: relative;
+    bottom: -150px;
+}
+
+#design .text {
+    color: white;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+
+#design .text h2 {
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+#design .text ul li {
+    padding: 15px 0;
+}
+
+#design .text ul li::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f108';
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+}
+/* End Design */
+
+/* Start Portfolio */
+#portfolio {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+
+#portfolio ul.shuffle {
+    display: flex;
+    justify-content: center;
+}
+
+#portfolio ul.shuffle li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#portfolio ul.shuffle li.active {
+    background-color: var(--main-color);
+    color: white;
+}
+
+#portfolio .imgs-holder {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+
+#portfolio .imgs-holder .box {
+    overflow: hidden;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    #portfolio .imgs-holder .box {
+        flex-basis: 50%;
+    }
+}
+
+@media (min-width: 1199px) {
+    #portfolio .imgs-holder .box {
+        flex-basis: 25%;
+    }
+}
+
+#portfolio .imgs-holder .box img {
+    max-width: 100%;
+    transition: 0.3s;
+}
+
+#portfolio .imgs-holder .box .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    transition: 0.3s;
+    bottom: -100%;
+}
+
+#portfolio .imgs-holder .box:hover .caption {
+    bottom: 0;
+}
+
+#portfolio .imgs-holder .box:hover img {
+    transform: rotate(3deg) scale(1.1);
+}
+
+#portfolio .imgs-holder .box .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+#portfolio .imgs-holder .box .caption p {
+    color: var(--main-color);
+}
+
+#portfolio a.more {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px 20px;
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+/* End Portfolio */
