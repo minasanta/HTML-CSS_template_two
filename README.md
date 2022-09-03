@@ -1,6 +1,8 @@
 # HTML-CSS_template_two
 
-A second resbonsive web template page using HTML & CSS only
+A second resbonsive web template page using HTML & CSS only.
+
+
 A tepmlate is Free Kasper - PSD from https://www.graphberry.com/
 
 ## Technologies used
